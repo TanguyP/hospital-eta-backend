@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "teltonika-parser-ex": "^0.0.16"
+  }
+}
