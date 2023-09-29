@@ -2,6 +2,7 @@
   "type": "module",
   "dependencies": {
     "teltonika-parser-ex": "^0.0.16",
-    "redis": "^4.6.10"
+    "redis": "^4.6.10",
+    "axios": "^1.5.1"
   }
 }

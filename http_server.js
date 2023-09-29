@@ -1,6 +1,8 @@
 import http from 'http';
 
+import config from './secret/config.json' assert {type: 'json'}
 import DataStore from './data_store.js';
+import RouteService from './route_service.js';
 
 
 // TODO: 2023-10-06: authentication
@@ -38,11 +40,19 @@ class HttpServer {
   }
   
   async getGpsLocationAction() {
-    let gpsLocation = await DataStore.get("gps_location");
+    const gpsLocation = await DataStore.get("gps_location");
     if (gpsLocation === null) {
       return [409, { error: "GPS data not available" }];
     }
-    return [200, gpsLocation];
+
+    const routeData = await RouteService.getRoute(
+      gpsLocation.longitude,
+      gpsLocation.latitude,
+      config.hospital.longitude,
+      config.hospital.latitude,
+    );
+
+    return [200, routeData];
   }
 }
 

@@ -6,5 +6,6 @@ if [ ! -f secret/remote_for_deploy.txt ]; then
 fi
 
 remote=`cat secret/remote_for_deploy.txt`
-scp *.js package*.json ${remote}
+scp *.js *.json ${remote}
+scp -r secret/ ${remote}
 echo "Deployment successful."
