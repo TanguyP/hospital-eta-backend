@@ -1,5 +1,7 @@
 {
+  "type": "module",
   "dependencies": {
-    "teltonika-parser-ex": "^0.0.16"
+    "teltonika-parser-ex": "^0.0.16",
+    "redis": "^4.6.10"
   }
 }
