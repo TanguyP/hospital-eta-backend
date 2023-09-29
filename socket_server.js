@@ -5,6 +5,7 @@ import Parser from 'teltonika-parser-ex';
 import DataStore from './data_store.js';
 
 
+// TODO: 2023-10-06: authentication
 class SocketServer {
   constructor(port) {
     this.__server = net.createServer((c) => {
@@ -50,7 +51,7 @@ class SocketServer {
 
     console.log(gpsInfo);
     const location = { longitude: gpsInfo.longitude, latitude: gpsInfo.latitude };
-    await DataStore.put('location', location);
+    await DataStore.put('gps_location', location);
   }
 }
 
