@@ -1,3 +1,8 @@
+# Server prerequisites
+- `sudo apt install nodejs`
+- `sudo apt install npm`
+- `sudo apt install redis-server`
+
 # How to deploy
 1. First time only:
 	1. If not already done, copy the `secret_examples/` folder to `secret/` (the latter is ignored by Git)
