@@ -10,3 +10,9 @@
 	1. Modify the `secret/config.json` file with the appropriate values
 	1. Recommended for easier deployment: generate an SSH key locally (or reuse it if you have one already) and add it to the server's authorized keys
 1. Run `./deploy.sh`
+
+# How to run
+On the server:
+1. `cd` to the root folder where the application is deployed
+1. Make sure `npm install` has been run
+1. Run `node app.js`
